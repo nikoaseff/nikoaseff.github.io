@@ -7,7 +7,7 @@ function inicio() {
   var contrasena = document.getElementById("clave").value
 
   if (nombre == "edu" && contrasena == "123") {
-    window.location.href = "anexo.html"
+    window.location.href = "anexo (3).html"
   
   } else {
     alert("Usuario o Contraseña inválidos")
