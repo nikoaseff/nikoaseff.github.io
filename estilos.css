@@ -1,0 +1,69 @@
+/*index*/
+
+*{          /*  * ?   */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;  /**/
+    justify-content: center;        /**/
+    align-items: center;
+    min-height: 100vh;              /**/
+    background: url('IMG\ Inicio.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.inicio{
+    width: 420px;
+    background-color: rgba(0, 0, 0, 0.319);
+    border: 2px solid rgba(255, 255, 255, 0.150);
+    color: rgb(247, 244, 244);
+    border-radius: 10px;  /**/
+    padding: 30px 40px;    /**/
+}
+
+.inicio h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.inicio .input-caja{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-caja input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;           /**/
+    outline: none;          /**/
+    border-radius: 40px;    /**/
+    border: 2px solid rgba(255, 255, 255, 0.150);
+    font-size: 15px;
+    color:rgb(109, 109, 109);
+    padding: 20px 40px;
+
+}
+.input-caja input::placeholder{
+    color: rgb(243, 241, 241);
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    font-size: 15px;
+    color: rgb(28, 28, 28);
+    cursor : pointer;
+    margin-bottom: 30px;
+    background-color: aliceblue;
+}
+
+

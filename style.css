@@ -1,0 +1,49 @@
+/*anexo*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /*todo elemento con contenido 
+                            incluye el padding y el borde, entonces si aplicas una altura o ancho 
+                            se aplica directamente al borde, saltandose el padding y el margin */
+
+    /*padding, border, margin*/
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    color: #000;
+    display: flex;
+    flex-direction: column;     /*todos los hijos (elementos dentro de otros) se acomoden verticalmente en columna*/
+    align-items: center;        /*todos los hijos aparte de estar en columna, estan centrados en el eje horizontal*/
+    min-height: 100vh;
+}
+
+/*estilos específicos para todas las etiquetas determinadas*/
+
+select, input[type="text"], input[type="number"] {  /*para todos los select de ese tipo, especificamente*/
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #999;
+    font-size: 14px;
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+
+
+button{
+    background: #0055aa;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 16px; /* Margen abajo para todos los botones */
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+

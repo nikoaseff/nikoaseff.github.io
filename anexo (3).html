@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title> MyVitalData </title>
+</head>
+
+<body>
+    <h1>Bienvenido a MyVitalData.com </h1>
+    <br>
+    <p> MyVitalData es una herramienta interactiva orientada a brindar información útil y personalizada sobre
+        tu estado corporal. A partir de tus datos físicos, calculamos tu Índice de Masa Corporal (IMC), te sugerimos una
+        ingesta diaria de agua adecuada y te ofrecemos recomendaciones prácticas según tus resultados. Además, podés
+        guardar tus datos, recibirlos por correo y acceder a contactos profesionales de salud en la ciudad de Córdoba.
+        ¡Explorá tu bienestar de forma fácil y rápida!</p>
+    </p>
+
+    <hr>
+    <br><br>
+
+
+
+
+
+    <h2> Calculadora IMC </h2>
+    <br>
+    <p>El Índice de Masa Corporal (IMC) es un indicador que relaciona el peso y la estatura de una persona para evaluar
+        si su masa corporal se encuentra en un rango saludable. Se calcula dividiendo el peso en kilogramos entre la
+        altura en metros al cuadrado (IMC = kg/m²).
+
+        Según la Organización Mundial de la Salud (OMS), el IMC es una herramienta básica para identificar posibles
+        riesgos asociados al peso, como desnutrición, sobrepeso u obesidad. Sin embargo, es importante considerar que:
+    <br>
+
+    <ul> <!--lista ordenada-->
+        <li>No distingue entre músculo y grasa: Atletas o personas con mucha masa muscular pueden tener un IMC alto sin
+            riesgo real.</li>
+        <li>No considera edad, sexo o distribución de grasa: Otros índices, como el Índice Cintura-Altura (ICA)
+            complementan su análisis.</li>
+        <li>Es una referencia, no un diagnóstico: Siempre consulta a un profesional de la salud para una evaluación
+            personalizada</li>
+    </ul>
+    </p>
+
+    <br>
+
+    <h4>Llene los siguientes campos para conocer su Índice de Masa Corporal </h4>
+    <br>
+    <form>
+        <p> Edad <input type="number" id="edad" placeholder="indica su edad" /> </p>
+
+        <p> Sexo <br><input type="radio" name="sexo" value="masculino"> Masculino
+            <input type="radio" name="sexo" value="femenino"> Femenino
+        </p>
+        <br>    
+
+        <p> Tu Peso Corporal (en Kilogramos) <input type="number" name="peso" id="peso" step="any"
+                placeholder="ejemplo: 80"> </p>
+
+        <p> Tu Altura (en Metros) <input type="number" name="altura" id="altura" step="any" placeholder="ejemplo: 1.80">
+        </p>
+
+    </form>
+
+    <button onclick="calculo1()"> Calcular IMC </button> <!--jsssss-->
+
+    <p>Tu Indice de Masa Corporal es : <input type="number" id="resultado1" readonly></p>
+
+
+    <h4> Clasificación de acuerdo a tu IMC </h4>
+    <br>
+    <ul>
+        <li> Desnutrición o bajo peso : (IMC menor a 18.5) </li>
+        <li> Normalidad : (IMC 18.5 - 24.9) </li>
+        <li> Sobrepeso : (IMC 25 - 39.9) </li>
+        <li> Obesidad grado (IMC mayor o igual a 40)</li>
+    </ul>
+
+
+    <hr>
+    <br>
+    <br>
+
+
+
+
+
+
+
+    <h2> Calculadora de ICA </h2>
+    <br>
+    <p> El índice cintura-altura es un índice que cuantifica la distribución de la masa corporal. Varios estudios han
+        demostrado que este índice muestra una mayor correlación con enfermedades cardiovasculares que el índice de masa
+        corporal.
+        La siglas en inglés del índice ICA son WHtR (waist-to-height ratio). Es importante no confundirlo con el índice
+        cintura-cadera, que en inglés se conoce como waist-to-hip ratio (WHR).
+        Esta medida se calcula con la razón entre la medida de la cintura y la estatura de la persona. </p>
+    <br>
+
+
+    <h4>Llene los siguientes campos para conocer su Índice Cintura-Altura </h4>
+    <br>
+
+    <form>
+        <p> Introduzca su género <br><br><input type="radio" name="sexo" value="masculino"> Masculino
+            <input type="radio" name="sexo" value="femenino"> Femenino
+        <br><br>    
+        <p> Introduzca la medida de su cintura (en cm) <input type="number" name="cintura" id="cintura" step="any"></p>
+        <p> Introduzca la medida de su estatura (en cm) <input type="number" name="estatura" id="estatura" step="any">
+        </p>
+
+
+
+    </form>
+
+    <button onclick="calculo2()"> Calcular ICA </button>
+
+    <p>Tu Indice de Índice de Cintura-Altura es de : <input type="number" id="resultado2" readonly></p>
+    <br><br>
+    <h3>Tu clasificación según el ICA (valores basados en estándares de la OMS) :</h3>
+    <br>
+    <ul>
+        <li> Delgadez (Hombres & Mujeres : ICA menor a 0.43)</li>
+        <li> Peso normal (Hombres : 0.43 - 0.52 | Mujeres : 0.42 - 0.48)</li>
+        <li> Sobrepeso (Hombres : 0.53 - 0.57 | Mujeres : 0.49 - 0.53) </li>
+        <li> Gordura (Hombres: ICA mayor o igual a 0.58 | Mujeres: ICA mayor o igual a 0.54)</li>
+    </ul>
+
+    <hr>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+    <h2>Recomendaciones en relación a su IMC y su ICA actuales</h2>
+
+    <p>Esta sección ha sido diseñada para ofrecerte recomendaciones específicas basadas en dos de los
+        indicadores más importantes de tu salud metabólica: tu Índice de Masa Corporal (IMC) y tu Índice Cintura-Altura
+        (ICA). Al combinar estos dos parámetros, nuestro sistema genera orientación precisa que realmente puede marcar
+        la diferencia en tu bienestar.
+
+        Nuestro algoritmo avanzado cruzará estos datos con los estándares de la Organización Mundial de la Salud, y
+        recibirás un análisis detallado con recomendaciones prácticas en tres áreas clave:
+
+
+        ¿Por qué estos indicadores son tan importantes?
+
+        El IMC nos da una primera aproximación sobre si tu peso es adecuado para tu estatura, pero presenta
+        limitaciones. Aquí es donde el ICA se convierte en un complemento esencial, ya que:
+
+        Detecta riesgos que el IMC por sí solo podría pasar por alto
+
+        Especialmente sensible a la peligrosa grasa abdominal
+
+        Considera las diferencias naturales entre cuerpos masculinos y femeninos
+
+        <br><br>
+        <h5>Nuestro diferencial</h5>
+        <br>
+        
+        A diferencia de otras herramientas genéricas, nuestro sistema:
+        <br>
+        ✓ Considera la interacción entre IMC e ICA
+        <br>
+        ✓ Ofrece recomendaciones graduales y alcanzables
+        <br>
+        ✓ Proporciona contexto sobre lo que realmente significan tus números
+        <br>
+        ✓ Incluye advertencias sobre cuándo buscar ayuda profesional</p>
+
+    <br><br>
+
+
+    <p>ACLARACIÓN IMPORTANTE : Tome en cuenta que su IMC y su ICA estan dentro de la misma categoría, por lo lo cual si
+        desea saltarse alguno de los calculos anteriores, elija el IMC o ICA que esté en la misma categoría.
+        Por ejemplo: Si su ICA es Normalidad, entonces seleccione Peso normal en su IMC. </p>
+
+    <br>
+    <p>Indique su IMC </p>
+
+        <select name="select1" id="sel_1">
+            <option value="_" disabled selected> _ </option>
+            <option value="des"> Desnutricion </option>
+            <option value="normal"> Normalidad </option>
+            <option value="sobrep"> Sobrepeso </option>
+            <option value="obesidad"> Obesidad </option>
+
+        </select>
+
+    <p>Indique su ICA </p>
+
+        <select name="select1" id="sel_2">
+            <option value="_" disabled selected> _ </option>
+            <option value="del"> Delgadez </option>
+            <option value="peso"> Peso Normal </option>
+            <option value="sobre"> Sobrepeso </option>
+            <option value="gordura"> Gordura </option>
+
+        </select>
+
+    <br>
+    <button onclick="reco()"> Conocer recomendación </button>
+
+    <br>
+
+    <p id="rta" readonly></p>
+
+    <br>
+
+
+    <hr>
+    <br>
+    <br>
+
+
+
+
+    <h3> ¿Desea consultar con un profesional? </h3>
+    <br><br>
+    <p>Nos preocupamos por tu bienestar integral. Por eso, si tus resultados de IMC o ICA
+        están fuera de los rangos recomendados, o simplemente deseas una evaluación más detallada, te ofrecemos la
+        opción de conectar con profesionales de la salud certificados en la ciudad de Córdoba.
+        <br>
+        ¿Por qué consultar con un especialista?
+        Diagnóstico preciso: Un profesional puede evaluar tu historial médico, hábitos y otros factores que herramientas
+        en línea no consideran.
+        <br>
+        Plan personalizado: Recibirás recomendaciones adaptadas a tus necesidades específicas (nutrición, ejercicio,
+        seguimiento).
+        <br>
+        Prevención de riesgos: Detecta a tiempo condiciones como diabetes, hipertensión o enfermedades cardiovasculares.
+        <br>
+        "Entendemos que los números pueden generar dudas. Por eso, facilitamos tu acceso a expertos que te guiarán con
+        empatía y conocimiento científico. ¡Tu salud es primero!"</p>
+
+    <form>
+        <br><br>
+        <p>Seleccione la clínica de su preferencia (en la ciudad de Córdoba) </p>
+
+        <select name="select3" id="sel_3">
+            <option value="_" disabled selected> _ </option>
+            <option value="oulton"> Oulton</option>
+            <option value="allende"> Sanatorio Allende</option>
+            <option value="reina"> Reina Fabiola</option>
+            <option value="privado"> Hospital privado Universitario de Córdoba</option>
+        </select>
+    </form>
+
+
+    <button type="button" onclick="profesional()"> Ir </button>
+
+    <hr>
+    <br>
+    <br>
+
+
+
+
+
+
+    
+
+    <h4>Nos interesa tu opinión!!</h4>
+    <br><br>
+
+
+    <p>En MyVitalData, valoramos cada opinión para seguir mejorando y ofrecerte la mejor experiencia. ¿Qué tal ha
+            sido tu paso por nuestra herramienta? ¡Déjanos saberlo!
+            <br>
+            ¿Por qué compartir tu opinión?
+            Nos ayuda a entender qué funciona bien y qué podemos mejorar.
+            <br>
+            Tus comentarios directos nos permiten ajustar las recomendaciones y cálculos.
+
+            Queremos que MyVitalData sea tan útil y amigable como sea posible para ti y otros usuarios.
+            <br><br>
+            ¿Cómo participar?
+            Califícanos del 1 al 7: ¿Qué tan útil te resultó la página? *(1 = Poco útil, 7 = Muy útil)*
+            <br><br>
+            Comentarios o críticas: ¿Algo no te gustó? ¿Tienes ideas para nuevas funciones? ¡Escríbelas aquí!
+            <br><br>
+            Enviar: Solo haz clic en el botón y listo. ¡Agradecemos cada mensaje!
+            <br><br>
+            Ejemplo de feedback que nos encanta recibir:
+            "Me gustaría poder guardar mis resultados para compararlos mes a mes"
+            "Las explicaciones del ICA fueron clarísimas, pero necesito más ejemplos de dietas"
+            
+
+
+            Agradecemos enormemente tu opinión!a </p>
+    <form>
+        <p>¿Qué tan útil le ha parecido nuestra página en una escala del 1 al 7?</p>
+        <select id="sel_4">
+            <option disabled selected> _ </option>
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+        </select>
+
+        <p>¿Tiene alguna crítica o comentario? Puede enviarnos su opinión </p>
+        <textarea id="sel_5" rows="10" cols="50"></textarea>
+
+    </form>
+    <button onclick="opinion()"> Enviar </button>
+
+    <p id="op"></p>
+
+    <br><br>
+
+    <h3>GRACIAS POR USAR MyVitalData ♥ </h3>
+
+</body>
+
+</html>
